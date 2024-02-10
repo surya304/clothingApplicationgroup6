@@ -1,6 +1,7 @@
 package com.example.clothinggroup6application
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 
 // LoginActivity.kt
@@ -10,6 +11,10 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        // Add your login page logic here
+
+
+
+
+
     }
 }

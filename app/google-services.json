@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "122499092317",
+    "project_id": "clothinggroup6application",
+    "storage_bucket": "clothinggroup6application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122499092317:android:598fe55b143067a2bbe2b4",
+        "android_client_info": {
+          "package_name": "com.example.clothinggroup6application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0DnBrmAPZIfjDj99c1ioBOWdZ9OnzEME"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

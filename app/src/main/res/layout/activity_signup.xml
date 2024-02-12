@@ -7,7 +7,6 @@
     android:background="@color/white"
     tools:context=".SignupActivity">
 
-    <!-- Add your UI components for the signup page (EditText, Button, etc.) here -->
     <ImageView
         android:id="@+id/logoImageView"
         android:layout_width="200dp"
@@ -22,10 +21,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/logoImageView"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="31dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginTop="24dp"
         android:hint="Email"
-        android:inputType="textEmailAddress"/>
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/passwordEditText"
@@ -33,10 +33,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/emailEditText"
         android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
         android:hint="Password"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/reenterPasswordEditText"
@@ -44,10 +45,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/passwordEditText"
         android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
         android:hint="Re-enter Password"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
 
 
 

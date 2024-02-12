@@ -37,7 +37,7 @@ class ProductAdapter(options: FirebaseRecyclerOptions<Product>)
                 .into(holder.imgPhoto)
         }
     }
-
+    // Commit
     class MyViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
         RecyclerView.ViewHolder(inflater.inflate(R.layout.item_product, parent, false)) {
         val txtName: TextView = itemView.findViewById(R.id.txtName)

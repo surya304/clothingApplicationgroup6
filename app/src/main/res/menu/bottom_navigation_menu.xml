@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_home"
+        android:title="Home"
+        android:icon="@drawable/home" />
+    <item
+        android:id="@+id/action_products"
+        android:title="Products"
+        android:icon="@drawable/product" />
+
+    <item
+        android:id="@+id/action_cart"
+        android:title="Cart"
+        android:icon="@drawable/cart" />
+
+    <item
+        android:id="@+id/action_login"
+        android:title="Login"
+        android:icon="@drawable/login"
+        />
+
+
+
+</menu>

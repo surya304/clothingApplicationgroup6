@@ -11,10 +11,10 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // Delay for a few seconds before navigating to the next screen
+        // Delaying for a few seconds before navigating to the next screen
         val handler = android.os.Handler()
         handler.postDelayed({
-            val intent = Intent(this, CartActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }, SPLASH_DELAY)
@@ -23,6 +23,6 @@ class SplashActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val SPLASH_DELAY: Long = 2000 // 2 seconds delay
+        const val SPLASH_DELAY: Long = 1200 // 1.2 seconds
     }
 }

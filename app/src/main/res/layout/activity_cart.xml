@@ -1,67 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".CartActivity">
 
-    <!-- Heading -->
+    <!-- Add an ImageView for the product image -->
+    <ImageView
+        android:id="@+id/productImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_margin="16dp"/>
+
+    <!-- Add TextViews for product details -->
     <TextView
-        android:id="@+id/textViewCartHeading"
+        android:id="@+id/productNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cart"
-        android:textSize="24sp"
-        android:layout_marginTop="16dp"
-        android:layout_centerHorizontal="true"/>
+        android:text="Product Name"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/productImageView"
+        android:layout_marginStart="16dp"/>
 
-    <!-- Quantity Counter -->
+    <TextView
+        android:id="@+id/productDescriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product Description"
+        android:textSize="14sp"
+        android:layout_below="@id/productNameTextView"
+        android:layout_toRightOf="@id/productImageView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/productPriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product Price"
+        android:textSize="16sp"
+        android:layout_below="@id/productDescriptionTextView"
+        android:layout_toRightOf="@id/productImageView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Add buttons for quantity increase and decrease -->
+
     <Button
-        android:id="@+id/buttonDecreaseQuantity"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:text="-"
-        android:layout_below="@id/textViewCartHeading"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"/>
-
-    <TextView
-        android:id="@+id/textViewQuantity"
+        android:id="@+id/increaseQuantityButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1"
-        android:layout_below="@id/textViewCartHeading"
-        android:layout_toEndOf="@id/buttonDecreaseQuantity"
-        android:layout_marginTop="16dp"
+        android:layout_below="@id/productPriceTextView"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/productImageView"
+        android:text="+" />
+
+    <TextView
+        android:id="@+id/quantityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productPriceTextView"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"/>
+        android:layout_marginLeft="-101dp"
+        android:layout_marginTop="27dp"
+        android:layout_toRightOf="@id/increaseQuantityButton"
+        android:text="1" />
 
     <Button
-        android:id="@+id/buttonIncreaseQuantity"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:text="+"
-        android:layout_below="@id/textViewCartHeading"
-        android:layout_toEndOf="@id/textViewQuantity"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="8dp"/>
-
-    <!-- Final Price -->
-    <TextView
-        android:id="@+id/textViewFinalPrice"
+        android:id="@+id/decreaseQuantityButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Final Price: $0.00"
-        android:layout_below="@id/buttonIncreaseQuantity"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"/>
+        android:text="-"
+        android:layout_below="@id/productPriceTextView"
+        android:layout_toRightOf="@id/quantityTextView"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"/>
 
-    <!-- Go to Checkout Button -->
+    <!-- Add a TextView to display the quantity -->
+
+
+    <ImageButton
+        android:id="@+id/deleteButton"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_below="@id/quantityTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-92dp"
+        android:layout_marginEnd="32dp"
+        android:src="@android:drawable/ic_menu_delete" />
+
+
     <Button
-        android:id="@+id/buttonGoToCheckout"
+        android:id="@+id/checkoutButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go to Checkout"
-        android:layout_below="@id/textViewFinalPrice"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"/>
+        android:text="Checkout"
+        android:layout_below="@id/deleteButton"
+        android:layout_marginTop="106dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

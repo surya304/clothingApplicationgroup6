@@ -11,19 +11,10 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // Add any splash screen logic here, such as delaying for a few seconds before navigating to the next screen
-//        Handler().postDelayed({
-//            val intent = Intent(this, LoginActivity::class.java)
-//            startActivity(intent)
-//            finish()
-//        }, SPLASH_DELAY)
-
-        // Add your splash screen logic here
-
         // Delay for a few seconds before navigating to the next screen
         val handler = android.os.Handler()
         handler.postDelayed({
-            val intent = Intent(this, SignupActivity::class.java)
+            val intent = Intent(this, CartActivity::class.java)
             startActivity(intent)
             finish()
         }, SPLASH_DELAY)

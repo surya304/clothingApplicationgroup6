@@ -99,7 +99,6 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_gravity="center"
-            android:backgroundTint="@color/black"
             android:onClick="placeOrder"
             android:text="Place Order"
             android:textColor="#fff" />

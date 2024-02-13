@@ -50,4 +50,6 @@
         app:layout_constraintStart_toStartOf="@id/txtDescription"
         android:text="$99.99" />
 
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

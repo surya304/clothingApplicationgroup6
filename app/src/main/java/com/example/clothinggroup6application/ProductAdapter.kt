@@ -1,7 +1,9 @@
 package com.example.clothinggroup6application
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -14,6 +16,7 @@ import org.w3c.dom.Text
 class ProductAdapter(options: FirebaseRecyclerOptions<Product>)
     : FirebaseRecyclerAdapter<Product, ProductAdapter.MyViewHolder>(options)
 {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         return MyViewHolder(inflater, parent)
@@ -26,6 +29,7 @@ class ProductAdapter(options: FirebaseRecyclerOptions<Product>)
         holder.txtDescription.text = model.description
         var theImage: String = model.image
 
+
         if(theImage.indexOf("gs://")>-1) {
             val storageReference = FirebaseStorage.getInstance().getReferenceFromUrl(theImage)
             Glide.with(holder.imgPhoto.context)
@@ -36,7 +40,18 @@ class ProductAdapter(options: FirebaseRecyclerOptions<Product>)
                 .load(theImage)
                 .into(holder.imgPhoto)
         }
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, ProductDetailsActivity::class.java)
+            intent.putExtra("name", model.name)
+            intent.putExtra("rating", model.rating)
+            intent.putExtra("price", model.price)
+            intent.putExtra("description", model.description)
+            intent.putExtra("image", model.image)
+            holder.itemView.context.startActivity(intent)
+        }
     }
+
     // Commit
     class MyViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
         RecyclerView.ViewHolder(inflater.inflate(R.layout.item_product, parent, false)) {
@@ -45,6 +60,10 @@ class ProductAdapter(options: FirebaseRecyclerOptions<Product>)
         val imgPhoto: ImageView = itemView.findViewById(R.id.imgPhoto)
         val txtPrice: TextView = itemView.findViewById(R.id.txtPrice)
         val txtDescription: TextView = itemView.findViewById(R.id.txtDescription)
+
+    }
+
+    interface OnItemClickListener {
 
     }
 }
